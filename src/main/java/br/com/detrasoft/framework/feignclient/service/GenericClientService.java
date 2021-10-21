@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import br.com.detrasoft.framework.core.controller.Response;
-
+ 
 public interface GenericClientService<T> {
 
 	@RequestMapping(value = "/", method = RequestMethod.POST)
