@@ -15,6 +15,9 @@ public interface GenericClientService<T> {
 
 	@RequestMapping(value = "/", method = RequestMethod.POST)
 	public ResponseEntity<Response<T>> create(@RequestBody T object);
+	
+	@RequestMapping(value = "/create-list", method = RequestMethod.POST)
+	public ResponseEntity<List<Response<T>>> createList(@RequestBody List<T> listEntity);
 
 	@RequestMapping(value = "/", method = RequestMethod.PUT)
 	public ResponseEntity<Response<T>> update(@RequestBody T object);
@@ -27,7 +30,7 @@ public interface GenericClientService<T> {
 
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
 	public ResponseEntity<Response<List<T>>> findAll();
-
+	
 	@PostMapping(value = "/validate")
 	public ResponseEntity<Response<T>> validate(@RequestBody T object);
 }
