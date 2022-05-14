@@ -17,8 +17,12 @@ public class AuthorizationHeaderConfig {
 		return new RequestInterceptor() {
 			@Override
 			public void apply(RequestTemplate template) {
-				template.header(HttpHeaders.AUTHORIZATION, String.format("Bearer %s", UsuarioContext.getToken()));
 				template.header(HttpHeaders.ACCEPT_LANGUAGE, LocaleContextHolder.getLocale().toString());
+				if (UsuarioContext.getIdUsuario() == null) {
+					template.header("enviroment", UsuarioContext.getIdDetrasoft().toString());
+				} else {
+					template.header(HttpHeaders.AUTHORIZATION, String.format("Bearer %s", UsuarioContext.getToken()));
+				}
 			}
 		};
 	}
