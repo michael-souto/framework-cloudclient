@@ -1,4 +1,4 @@
-package br.com.detrasoft.framework.feignclient.service;
+package br.com.detrasoft.framework.cloudclient.service;
 
 import java.util.List;
 

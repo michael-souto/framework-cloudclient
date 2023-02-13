@@ -5,9 +5,9 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>br.com.detrasoft</groupId>
-	<artifactId>framework-feignclient</artifactId>
+	<artifactId>framework-cloudclient</artifactId>
 	<version>0.0.1</version>
-	<name>framework-feignclient</name>
+	<name>framework-cloudclient</name>
 	<description>Submodulo de padronização de uso do Feign do Spring Clound para os microserviços</description>
 
 	<parent>
