@@ -1,4 +1,4 @@
-package br.com.detrasoft.framework.cloudclient.service;
+package com.detrasoft.framework.cloudclient.service;
 
 import org.springframework.data.domain.Pageable;
 import org.springframework.hateoas.PagedModel;

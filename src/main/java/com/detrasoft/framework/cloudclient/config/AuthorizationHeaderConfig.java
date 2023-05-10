@@ -1,4 +1,4 @@
-package br.com.detrasoft.framework.cloudclient.config;
+package com.detrasoft.framework.cloudclient.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
