@@ -4,6 +4,8 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.hateoas.PagedModel;
 import org.springframework.http.ResponseEntity;
 
+import java.util.UUID;
+
 public class GenericClientFallbackServiceFactory<T> implements GenericClientService<T> {
     @Override
     public ResponseEntity<T> insert(T object) {
@@ -16,12 +18,12 @@ public class GenericClientFallbackServiceFactory<T> implements GenericClientServ
     }
 
     @Override
-    public ResponseEntity<T> delete(Long id) {
+    public ResponseEntity<T> delete(UUID id) {
         return null;
     }
 
     @Override
-    public ResponseEntity<T> findById(Long id) {
+    public ResponseEntity<T> findById(UUID id) {
         return null;
     }
 

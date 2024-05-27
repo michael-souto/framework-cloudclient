@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import java.util.UUID;
+
 public interface GenericClientService<T> {
 
 	@RequestMapping(value = "/", method = RequestMethod.POST)
@@ -17,10 +19,10 @@ public interface GenericClientService<T> {
 	public ResponseEntity<T> update(@RequestBody T object);
 
 	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
-	public ResponseEntity<T> delete(@PathVariable("id") Long id);
+	public ResponseEntity<T> delete(@PathVariable("id") UUID id);
 
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
-	public ResponseEntity<T> findById(@PathVariable("id") Long id);
+	public ResponseEntity<T> findById(@PathVariable("id") UUID id);
 
 	@RequestMapping(value = "/", method = RequestMethod.GET)
 	public ResponseEntity<PagedModel<T>> findAll(Pageable pageable);
