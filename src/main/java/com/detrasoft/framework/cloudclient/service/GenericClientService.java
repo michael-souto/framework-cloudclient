@@ -17,8 +17,8 @@ public interface GenericClientService<T> {
 	@RequestMapping(method = RequestMethod.POST)
 	public ResponseEntity<TResponseNotification<T>> insert(@RequestBody T object);
 
-	@RequestMapping(method = RequestMethod.PUT)
-	public ResponseEntity<TResponseNotification<T>> update(@RequestBody T object);
+	@RequestMapping(method = RequestMethod.PUT, value = "/{id}")
+	public ResponseEntity<TResponseNotification<T>> update(@PathVariable("id") UUID id, @RequestBody T object);
 
 	@RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
 	public ResponseEntity<TResponseNotification<T>> delete(@PathVariable("id") UUID id);
