@@ -15,7 +15,7 @@ public class GenericClientFallbackServiceFactory<T> implements GenericClientServ
     }
 
     @Override
-    public ResponseEntity<TResponseNotification<T>> update(T object) {
+    public ResponseEntity<TResponseNotification<T>> update(UUID id, T object) {
         return null;
     }
 
